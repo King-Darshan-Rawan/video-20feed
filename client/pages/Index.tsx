@@ -1,11 +1,22 @@
-import { Mic, MicOff, Video, VideoOff, Phone, Gift } from "lucide-react";
-import { useState } from "react";
+import { Mic, MicOff, Video, VideoOff, Phone, Gift, MessageCircle, Volume2, VolumeX, Send } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
 
 export default function Index() {
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoOn, setIsVideoOn] = useState(true);
   const [isMale, setIsMale] = useState(true);
   const [isAISpeaking, setIsAISpeaking] = useState(false);
+  const [currentMood, setCurrentMood] = useState<'happy' | 'calm' | 'excited' | 'neutral'>('neutral');
+  const [chatMessages, setChatMessages] = useState<Array<{id: string, text: string, sender: 'user' | 'ai', timestamp: Date}>>([]);
+  const [currentTyping, setCurrentTyping] = useState('');
+  const [isTyping, setIsTyping] = useState(false);
+  const [floatingEmojis, setFloatingEmojis] = useState<Array<{id: string, emoji: string, x: number, y: number}>>([]);
+  const [isTTSEnabled, setIsTTSEnabled] = useState(false);
+  const [currentExpression, setCurrentExpression] = useState<'smile' | 'laugh' | 'nod' | null>(null);
+  const [userMessage, setUserMessage] = useState('');
+  const [showChat, setShowChat] = useState(false);
+  const chatEndRef = useRef<HTMLDivElement>(null);
+  const typingTimeoutRef = useRef<NodeJS.Timeout>();
 
   return (
     <div className="h-screen w-full bg-video-gradient flex flex-col overflow-hidden">
