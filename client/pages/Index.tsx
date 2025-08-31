@@ -11,9 +11,7 @@ export default function Index() {
       {/* Top Bar */}
       <div className="flex-shrink-0 p-4 sm:p-6">
         <div className="glass rounded-2xl p-4 text-center">
-          <h1 className="text-xl sm:text-2xl font-bold text-white">
-            Lumi
-          </h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-white">Lumi</h1>
         </div>
       </div>
 
@@ -27,9 +25,10 @@ export default function Index() {
               <div className="text-center">
                 <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white/20">
                   <img
-                    src={isMale
-                      ? "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
-                      : "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
+                    src={
+                      isMale
+                        ? "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
+                        : "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                     }
                     alt={isMale ? "Male AI Assistant" : "Female AI Assistant"}
                     className="w-full h-full object-cover transition-all duration-300"
