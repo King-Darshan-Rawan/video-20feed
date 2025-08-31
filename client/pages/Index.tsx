@@ -36,8 +36,25 @@ export default function Index() {
                 </p>
               </div>
 
+              {/* Gender Toggle Switch - Top Right */}
+              <button
+                onClick={() => setIsMale(!isMale)}
+                className="absolute top-4 right-4 w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200 hover:scale-105"
+              >
+                {isMale ? (
+                  <User className="w-5 h-5 text-blue-400" />
+                ) : (
+                  <UserCheck className="w-5 h-5 text-pink-400" />
+                )}
+              </button>
+
+              {/* Gift Box - Bottom Right */}
+              <button className="absolute bottom-4 right-4 w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200 hover:scale-105">
+                <Gift className="w-5 h-5 text-yellow-400" />
+              </button>
+
               {/* Animated background elements */}
-              <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute -top-4 -right-4 w-16 h-16 bg-call-primary/10 rounded-full animate-bounce"></div>
                 <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-purple-500/10 rounded-full animate-pulse"></div>
               </div>
