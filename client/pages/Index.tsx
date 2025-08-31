@@ -28,11 +28,16 @@ export default function Index() {
                 <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white/20">
                   <img
                     src={isMale
-                      ? "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format"
-                      : "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format"
+                      ? "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
+                      : "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
                     }
                     alt={isMale ? "Male AI Assistant" : "Female AI Assistant"}
                     className="w-full h-full object-cover transition-all duration-300"
+                    onError={(e) => {
+                      e.currentTarget.src = isMale
+                        ? "https://via.placeholder.com/150/4F46E5/FFFFFF?text=M"
+                        : "https://via.placeholder.com/150/EC4899/FFFFFF?text=F";
+                    }}
                   />
                 </div>
                 <p className="text-white/80 text-sm sm:text-base font-medium">
