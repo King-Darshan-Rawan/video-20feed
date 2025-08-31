@@ -14,12 +14,12 @@ export default {
     },
     extend: {
       colors: {
-        'navy-900': '#0f1419',
-        'navy-800': '#1a202c',
-        'navy-700': '#2d3748',
-        'call-primary': '#3b82f6',
-        'call-danger': '#ef4444',
-        'call-success': '#10b981',
+        "navy-900": "#0f1419",
+        "navy-800": "#1a202c",
+        "navy-700": "#2d3748",
+        "call-primary": "#3b82f6",
+        "call-danger": "#ef4444",
+        "call-success": "#10b981",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -65,10 +65,11 @@ export default {
         },
       },
       backdropBlur: {
-        'xs': '2px',
+        xs: "2px",
       },
       backgroundImage: {
-        'video-gradient': 'linear-gradient(135deg, #0f1419 0%, #1a202c 50%, #000000 100%)',
+        "video-gradient":
+          "linear-gradient(135deg, #0f1419 0%, #1a202c 50%, #000000 100%)",
       },
       borderRadius: {
         lg: "var(--radius)",

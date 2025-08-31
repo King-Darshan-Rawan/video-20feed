@@ -33,7 +33,7 @@ export default function Index() {
                 </p>
               </div>
             </div>
-            
+
             {/* Video status indicator */}
             <div className="absolute top-4 left-4">
               <div className="glass rounded-lg px-3 py-1">
@@ -59,7 +59,7 @@ export default function Index() {
                   Character animation will appear here
                 </p>
               </div>
-              
+
               {/* Animated background elements */}
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-4 -right-4 w-16 h-16 bg-call-primary/10 rounded-full animate-bounce"></div>
