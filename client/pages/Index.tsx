@@ -5,6 +5,7 @@ export default function Index() {
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoOn, setIsVideoOn] = useState(true);
   const [isMale, setIsMale] = useState(true);
+  const [isAISpeaking, setIsAISpeaking] = useState(false);
 
   return (
     <div className="h-screen w-full bg-video-gradient flex flex-col overflow-hidden">
@@ -42,9 +43,31 @@ export default function Index() {
                 <p className="text-white/80 text-sm sm:text-base font-medium">
                   {isMale ? "Berk" : "Luna"}
                 </p>
-                <p className="text-white/50 text-xs sm:text-sm mt-1">
-                  {isMale ? "Male" : "Female"} character ready
-                </p>
+
+                {/* Audio Wave Visualization */}
+                <div className="flex items-center justify-center gap-1 mt-3 mb-2">
+                  {[...Array(5)].map((_, i) => (
+                    <div
+                      key={i}
+                      className={`w-1 bg-gradient-to-t from-call-primary to-purple-500 rounded-full transition-all duration-150 ${
+                        isAISpeaking
+                          ? 'animate-pulse h-4 sm:h-6'
+                          : 'h-1'
+                      }`}
+                      style={{
+                        animationDelay: isAISpeaking ? `${i * 100}ms` : '0ms',
+                        animationDuration: isAISpeaking ? `${600 + (i * 100)}ms` : '150ms'
+                      }}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  onClick={() => setIsAISpeaking(!isAISpeaking)}
+                  className="text-white/50 text-xs sm:text-sm hover:text-white/70 transition-colors"
+                >
+                  {isAISpeaking ? "🔊 Speaking..." : "💬 Click to simulate speaking"}
+                </button>
               </div>
 
               {/* Gender Toggle Switch - Top Right */}
