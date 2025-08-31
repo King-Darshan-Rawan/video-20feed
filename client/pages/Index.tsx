@@ -41,7 +41,7 @@ export default function Index() {
                   />
                 </div>
                 <p className="text-white/80 text-sm sm:text-base font-medium">
-                  AI Assistant {isMale ? "(Male)" : "(Female)"}
+                  {isMale ? "Berk" : "Luna"}
                 </p>
                 <p className="text-white/50 text-xs sm:text-sm mt-1">
                   {isMale ? "Male" : "Female"} character ready
