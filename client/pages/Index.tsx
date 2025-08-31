@@ -50,13 +50,13 @@ export default function Index() {
                     <div
                       key={i}
                       className={`w-1 bg-gradient-to-t from-call-primary to-purple-500 rounded-full transition-all duration-150 ${
-                        isAISpeaking
-                          ? 'animate-pulse h-4 sm:h-6'
-                          : 'h-1'
+                        isAISpeaking ? "animate-pulse h-4 sm:h-6" : "h-1"
                       }`}
                       style={{
-                        animationDelay: isAISpeaking ? `${i * 100}ms` : '0ms',
-                        animationDuration: isAISpeaking ? `${600 + (i * 100)}ms` : '150ms'
+                        animationDelay: isAISpeaking ? `${i * 100}ms` : "0ms",
+                        animationDuration: isAISpeaking
+                          ? `${600 + i * 100}ms`
+                          : "150ms",
                       }}
                     />
                   ))}
@@ -66,7 +66,9 @@ export default function Index() {
                   onClick={() => setIsAISpeaking(!isAISpeaking)}
                   className="text-white/50 text-xs sm:text-sm hover:text-white/70 transition-colors"
                 >
-                  {isAISpeaking ? "🔊 Speaking..." : "💬 Click to simulate speaking"}
+                  {isAISpeaking
+                    ? "🔊 Speaking..."
+                    : "💬 Click to simulate speaking"}
                 </button>
               </div>
 
