@@ -42,9 +42,9 @@ export default function Index() {
                 className="absolute top-4 right-4 w-10 h-10 glass rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-200 hover:scale-105"
               >
                 {isMale ? (
-                  <User className="w-5 h-5 text-blue-400" />
+                  <div className="text-blue-400 font-bold text-lg">♂</div>
                 ) : (
-                  <UserCheck className="w-5 h-5 text-pink-400" />
+                  <div className="text-pink-400 font-bold text-lg">♀</div>
                 )}
               </button>
 
