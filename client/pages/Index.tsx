@@ -18,34 +18,9 @@ export default function Index() {
 
       {/* Main Content Area */}
       <div className="flex-1 flex flex-col lg:flex-row gap-4 sm:gap-6 px-4 sm:px-6 pb-4 sm:pb-6 min-h-0">
-        {/* Left Section - Video Feed */}
+        {/* AI Character Preview - Full Width */}
         <div className="flex-1 min-h-0">
-          <div className="glass-dark rounded-3xl h-full p-6 flex items-center justify-center relative overflow-hidden">
-            {/* Placeholder video feed */}
-            <div className="w-full h-full bg-gradient-to-br from-navy-700/50 to-navy-900/50 rounded-2xl flex items-center justify-center border border-white/5">
-              <div className="text-center">
-                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Video className="w-8 h-8 sm:w-10 sm:h-10 text-white/60" />
-                </div>
-                <p className="text-white/60 text-sm sm:text-base">Video Feed</p>
-                <p className="text-white/40 text-xs sm:text-sm mt-1">
-                  Your camera will appear here
-                </p>
-              </div>
-            </div>
-
-            {/* Video status indicator */}
-            <div className="absolute top-4 left-4">
-              <div className="glass rounded-lg px-3 py-1">
-                <span className="text-white/80 text-sm">Live</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Right Section - AI Character Preview */}
-        <div className="w-full lg:w-80 xl:w-96 min-h-0">
-          <div className="glass-dark rounded-3xl h-full p-6 flex items-center justify-center">
+          <div className="glass-dark rounded-3xl h-full py-6 pr-6 pl-0 -ml-0.5 flex items-center justify-center">
             {/* Placeholder for Lottie animation */}
             <div className="w-full h-full bg-gradient-to-br from-call-primary/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-white/5 relative overflow-hidden">
               <div className="text-center">
