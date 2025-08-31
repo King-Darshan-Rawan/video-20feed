@@ -1,4 +1,4 @@
-import { Mic, MicOff, Video, VideoOff, Phone, Gift, User, UserCheck } from "lucide-react";
+import { Mic, MicOff, Video, VideoOff, Phone, Gift } from "lucide-react";
 import { useState } from "react";
 
 export default function Index() {
