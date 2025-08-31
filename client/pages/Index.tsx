@@ -1,9 +1,10 @@
-import { Mic, MicOff, Video, VideoOff, Phone } from "lucide-react";
+import { Mic, MicOff, Video, VideoOff, Phone, Gift, User, UserCheck } from "lucide-react";
 import { useState } from "react";
 
 export default function Index() {
   const [isMuted, setIsMuted] = useState(false);
   const [isVideoOn, setIsVideoOn] = useState(true);
+  const [isMale, setIsMale] = useState(true);
 
   return (
     <div className="h-screen w-full bg-video-gradient flex flex-col overflow-hidden">
@@ -11,7 +12,7 @@ export default function Index() {
       <div className="flex-shrink-0 p-4 sm:p-6">
         <div className="glass rounded-2xl p-4 text-center">
           <h1 className="text-xl sm:text-2xl font-bold text-white">
-            AI Video Meet
+            Lumi
           </h1>
         </div>
       </div>
