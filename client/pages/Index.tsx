@@ -25,14 +25,21 @@ export default function Index() {
             {/* Placeholder for Lottie animation */}
             <div className="w-full h-full bg-gradient-to-br from-call-primary/20 to-purple-500/20 rounded-2xl flex items-center justify-center border border-white/5 relative overflow-hidden">
               <div className="text-center">
-                <div className="w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-br from-call-primary to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-white/20 rounded-full"></div>
+                <div className="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden mx-auto mb-4 border-4 border-white/20">
+                  <img
+                    src={isMale
+                      ? "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format"
+                      : "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format"
+                    }
+                    alt={isMale ? "Male AI Assistant" : "Female AI Assistant"}
+                    className="w-full h-full object-cover transition-all duration-300"
+                  />
                 </div>
                 <p className="text-white/80 text-sm sm:text-base font-medium">
-                  AI Assistant
+                  AI Assistant {isMale ? "(Male)" : "(Female)"}
                 </p>
                 <p className="text-white/50 text-xs sm:text-sm mt-1">
-                  Character animation will appear here
+                  {isMale ? "Male" : "Female"} character ready
                 </p>
               </div>
 
